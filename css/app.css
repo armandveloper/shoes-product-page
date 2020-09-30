@@ -1,0 +1,257 @@
+:root {
+	--primary-color: #5352ec;
+}
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	font-family: system-ui, sans-serif;
+	font-size: 1.6rem;
+	margin: 0;
+	overflow: hidden;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.page {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr 35%;
+}
+.page-left {
+	background-color: #fff;
+	height: 100%;
+}
+.page-right {
+	background-color: var(--primary-color);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	height: 145px;
+	padding: 4rem;
+	display: flex;
+	align-items: center;
+}
+.nav {
+	margin-left: 10rem;
+}
+.link {
+	color: #000;
+	display: inline-block;
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin-right: 3rem;
+}
+.top-actions {
+	height: 145px;
+	padding: 4rem 4rem 4rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.search-input {
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	background: none;
+	border-radius: 20px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 1.6rem;
+	height: 40px;
+	margin-right: 1.5rem;
+	padding: 4px 15px;
+	width: 220px;
+}
+.search-input:focus {
+	outline: 0;
+}
+.search-input::placeholder {
+	color: #fff;
+}
+.shopping-cart {
+	background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.8rem;
+}
+.shopping-cart:focus {
+	outline: 0;
+}
+.shoes-info {
+	padding: 0 90px;
+}
+.wrapper {
+	/* margin: 0 auto; */
+	width: 490px;
+}
+.breadcrumb {
+	display: flex;
+}
+.breadcrumb-item:not(:last-of-type)::after {
+	content: '/';
+	margin: 0 0.5rem;
+}
+.breadcrumb-link {
+	color: #000;
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+.breadcrumb-item:last-of-type {
+	opacity: 0.4;
+}
+.shoes-name {
+	font-size: 5rem;
+	margin: 2rem 0;
+	text-transform: capitalize;
+}
+.reviews-container {
+	display: flex;
+	align-items: center;
+}
+.reviews-ratings .fa-star {
+	color: #fea901;
+}
+.reviews-rating-number {
+	font-weight: 700;
+	margin: 0 1.5rem;
+}
+.reviews-amount {
+	opacity: 0.6;
+}
+.price-container {
+	margin: 1.5rem 0;
+	display: flex;
+	align-items: center;
+}
+.discount-price {
+	font-size: 3.2rem;
+	font-weight: 700;
+	margin: 0;
+	margin-right: 3.5rem;
+}
+.discount-price sup {
+	font-size: 2rem;
+}
+.normal-price {
+	font-size: 2rem;
+	margin: 0;
+	opacity: 0.6;
+}
+.normal-price sup {
+	font-size: 0.8rem;
+}
+.shoes-description,
+.color-label,
+.size-container label {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	opacity: 0.6;
+}
+.shoes-options {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+}
+.color-container {
+	margin-right: 2rem;
+	display: flex;
+	align-items: center;
+}
+.color-circle {
+	border-radius: 50%;
+	display: inline-block;
+	height: 30px;
+	margin-left: 1.5rem;
+	width: 30px;
+}
+.color-circle:nth-of-type(1) {
+	background-color: #fa5525;
+}
+.color-circle:nth-of-type(2) {
+	background-color: #4e4e4e;
+}
+.color-circle:nth-of-type(3) {
+	background-color: #32416f;
+}
+.size-select {
+	border-radius: 15px;
+	font-size: 1.6rem;
+	height: 30px;
+	margin-left: 1rem;
+	padding: 0 8px;
+}
+.shoes-actions {
+	margin: 2.5rem 0 3rem;
+}
+.btn {
+	background-color: #5352ec;
+	border-radius: 24px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 1.4rem;
+	height: 48px;
+	overflow: hidden;
+	padding: 0 30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn:focus {
+	outline: 0;
+}
+.btn-icon i {
+	margin-right: 1rem;
+}
+.btn-transparent {
+	background: none;
+	color: #000;
+	font-weight: 500;
+}
+.shoes-actions .btn:first-child {
+	margin-right: 2rem;
+	width: 40%;
+}
+.shipping-info {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	opacity: 0.6;
+}
+.shoes-container {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.shoes {
+	object-fit: cover;
+}
+@media (min-width: 992px) {
+	.shoes {
+		max-width: 500px;
+		transform: translate(-35%, -25%) rotate(-20deg);
+	}
+}
+
+@media (min-width: 1400px) {
+	.shoes {
+		max-width: 800px;
+		transform: translate(-30%, -32%) rotate(-20deg);
+	}
+}
