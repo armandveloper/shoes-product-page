@@ -61,6 +61,7 @@ ul {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	z-index: 10;
 }
 .search-input {
 	border: 1px solid rgba(255, 255, 255, 0.6);
@@ -172,9 +173,11 @@ ul {
 }
 .color-circle {
 	border-radius: 50%;
+	cursor: pointer;
 	display: inline-block;
 	height: 30px;
 	margin-left: 1.5rem;
+	user-select: none;
 	width: 30px;
 }
 .color-circle:nth-of-type(1) {
